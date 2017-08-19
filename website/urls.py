@@ -16,6 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from base import views as base_views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+
+    url(r'^$', base_views.HomeView.as_view(), name='home'),
 ]
