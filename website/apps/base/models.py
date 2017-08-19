@@ -24,9 +24,11 @@ class DisplayModel(models.Model):
 
 
 class Podcast(DisplayModel):
-    title = models.CharField(max_length=250)
+    title = models.CharField(max_length=250, help_text="Name of podcast")
     slug = models.SlugField(unique=True, null=True, blank=True)
-    text = models.TextField(null=True, blank=True)
+    image = models.ImageField(null=True, blank=True, help_text="Image (gif/jpg/png)")
+    file = models.FileField(null=True, blank=True, help_text="Audio file")
+    text = models.TextField(null=True, blank=True, help_text="Text of podcast")
 
     def __unicode__(self):
         return self.title

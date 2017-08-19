@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     url(r'^$', base_views.HomeView.as_view(), name='home'),
+    url(r'^podcasts/(?P<pk>\d+)/listen/$', base_views.ListenView.as_view(), name='listen'),
 ]

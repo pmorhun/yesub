@@ -1,0 +1,6 @@
+{% load static %}
+
+<h2>List of Podcasts</h2>
+{% for podcast in podcasts %}
+  <li>{{ podcast.title }}</li>
+{% endfor %}

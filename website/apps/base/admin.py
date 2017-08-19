@@ -9,7 +9,7 @@ from base.models import Podcast
 
 class PodcastAdmin(admin.ModelAdmin):
     model = Podcast
-    fields = ('title', 'text', 'is_displayed', 'priority', 'slug')
+    fields = ('title', 'image', 'file', 'text', 'is_displayed', 'priority', 'slug')
     prepopulated_fields = {"slug": ("title",)}
 
 

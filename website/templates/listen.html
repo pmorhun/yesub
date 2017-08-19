@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
-{% block title %}Home - Yellow Submarine{% endblock %}
+{% block title %}Listen{% endblock %}
 {% block meta-description-page %}Yellow Submarine - the best learn English{% endblock meta-description-page %}
 
 
-{% block content %}
-  {% include 'includes/_podcast_list.html' %}
-{% endblock %}
-
+{% for podcast in podcasts %}
+  Podcast
+  <li>{{ podcast.title }}</li>
+{% endfor %}
 
 
