@@ -4,9 +4,9 @@
 {% block meta-description-page %}Yellow Submarine - the best learn English{% endblock meta-description-page %}
 
 
-{% for podcast in podcasts %}
+{% block content %}
   Podcast
   <li>{{ podcast.title }}</li>
-{% endfor %}
+{% endblock %}
 
 

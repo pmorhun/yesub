@@ -2,5 +2,5 @@
 
 <h2>List of Podcasts</h2>
 {% for podcast in podcasts %}
-  <li>{{ podcast.title }}</li>
+  <li><a href="{% url "listen" podcast.id %}">{{ podcast.title }}</a> </li>
 {% endfor %}
